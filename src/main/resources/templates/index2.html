@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-
+  TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+  crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Titulo ipo H1</h1>
+  <p>Primer párrafo</p>
+  <p>Segundo párrafo <br></p> <!-- el <br> no hace falta en es los párrafos ya que insertan automáticamente un salto -->
+
+  <h2>Títulooo H2 tipo h2</h2>
+
+  <p>Ejemplo de justificado: (centro)</p>
+  <p align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil molestias facere repellat perferendis expedita ipsam veritatis id labore, possimus sit eius quam libero at tempore molestiae aperiam praesentium ea. Illo.</p>
+
+  <a href="http://www.google.com" target="_blank"> Link a <strong>Google</strong> <br></a> <!-- se coloca http porque sino busca el www en la ruta local -->
+  <a href="www.google.com" target="new"> Link2 a google <br></a>
+
+
+  <p>Lista desordenada:</p>
+  <ul type="square">
+    <li>elemento1</li>
+    <li type="circle">elemento2</li>
+    <li>elemento3</li>
+  </ul>
+  <p>Lista Ordenada:</p>
+  <ol type="a">
+    <li>Juan</li>
+    <li type="1">paco</li>
+    <li type="I">pedro</li>
+    <li>de la mar</li>
+    <li>otro nombre</li>
+  </ol>
+  <ol>
+    <li start="1">aca reinicia</li>
+    <li>y acá otro más</li>
+    <li>y el último</li>
+  </ol>
+
+  <p>Listas anidadas:</p>
+  <p>Ciudades del mundo</p>
+  <ul>
+    <li>Argentina </li>
+    <ol>
+      <li>Buenos Aires </li>
+      <li>Bariloche </li>
+    </ol>
+    <li>Uruguay </li>
+    <ol>
+      <li>Montevideo </li>
+      <li>Punta del Este </li>
+    </ol>
+  </ul>
+
+  <p>Enlace externo en una imágen:</p>
+  <a href="https://eggeducacion.com/es-AR/ " target ="_blank"><img src="https://moodle.eggeducacion.app/pluginfile.php/1/theme_remui/logomini/1633025690/huevo.png" alt="el huevo de EGG"></a>
+  <br>
+  <p>Enlace interno:</p>
+  <a href="Recursos/recursos.html">click para navegar a la página local del recurso</a>
+
+
+
+  <p>Tablas (con CSS embebido:)</p>
+
+  <table border="4px" cellspacing="0" cellpadding="4">
+    <tr>
+      <th style="background: rgb(100, 200, 200)">celda 1-1 (header)</th>
+      <th style="background: rgb(200, 100, 200)">celda 1-2 (header) </th>
+    </tr>
+    <tr>
+      <td colspan="2" style="background: rgb(200, 200, 200)" bordercolor = "red" >celda 2-1</td>
+      <td style="background: rgb(200, 100, 200)">celda 2-2</td>
+    </tr>
+  </table>
+
+  <p>Bordes en celdas individuales:</p>
+  <table border="0" cellspacing="0" cellpadding="4">
+    <tr> <td>one</td>
+     <td><table border="1" cellpadding="4">
+      <tr><td>two</td></tr></table></td>
+      <td>three</td> </tr>
+    </table>
+
+    <p>Formulario:</p>
+
+    <form action="ruta del metodo que va a manejar la información" method="POST"
+    enctype="multipart/form-data">
+    <label>Caja de texto:</label><br>
+    <input type="text" name="texto" value="texto inicial" maxlength="10"> texto plano </input> <br>
+    <input type="number" name="numeros" placeholder="hint"> números </input> <br>
+    <input type="date" name="fecha"> feecha </input> <br>
+    <input type="email" name="email"> mail </input> <br>
+    <input type="password" name="contraseña"> contraseña </input> <br>
+    <br>
+    <br>
+    <label>Textimput más grande (textarea):</label>
+    <br>
+    <textarea name="comentario" rows="10" cols="40" placeholder="escribe aquí tu comentario"></textarea>
+
+    <p>Ejemplo de label:</p>
+    <label for="entrada1">Etiqueta para input id "entrada1":</label><br>
+    <input type="text" id= "entrada1" name="entrada1">
+    <br><br>
+
+    <label for="estacion">Elemento Select:</label><br>
+    <select id="estacion" name="estacion" size="3" multiple>
+      <option value="primavera">Primavera</option>
+      <option value="verano">Verano</option>
+      <option value="otoño" selected>Otoño</option>
+      <option value="invierno">Invierno</option>
+    </select>
+
+    <p>Input para etiquetas de radio:</p>
+    <input type="radio" id="primavera" name="estacion" value="1">
+    <label for="primavera">Primavera</label>
+    <br>
+    <input type="radio" id="verano" name="estacion" value="2">
+    <label for="verano">Verano</label>
+    <br>
+    <input type="radio" id="otonio" name="estacion" value="3" checked>
+    <label for="otonio">Otoño</label>
+    <br>
+    <input type="radio" id="invierno" name="estacion" value="4">
+    <label for="invierno">Invierno</label>
+
+
+    <p>Input para checkbox:</p>
+
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" checked>
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+
+    <p>botón submit para envío de formulario:</p>
+    <button type="submit">Enviar</button>
+
+    <p>Botón de borrado de formulario:</p>
+    <button type="reset">Borrar Formulario</button>
+  </form>
+  <p>Aplicamos el estilo sólo a la subetiqueta span: </p>
+  <p>My mother has <span>blue</span> eyes.</p>
+
+  <p>Aplicamos estilos a párrafos, según la clase:</p>
+
+  <p class="estilo_P1">Párrafo 1 class estilo_P1</p>
+  <p class="estilo_P2">Párrafo 2 class estilo_P2</p>
+  <br>
+  <br>
+  <br>
+  <!-- <p>Práctica con margin y padding:</p>
+
+  <div class="maincont">
+
+    <div class="contenedor1">
+
+      <img src="imagen1.jpg" alt="homero simpson">
+
+    </div>
+
+    <div class="contenedor2">
+
+      <img src="bart.png" alt="bart simpson">
+    </div>
+
+  </div> -->
+
+  <p>menú con estilo CSS:</p>
+
+  <ul class="menuCSS">
+    <li><a href="#">Elemento 1</a></li>
+    <li><a href="#">Elemento 2</a></li>
+    <li><a href="#">Elemento 3</a></li>
+    <li><a href="#">Elemento 4</a></li>
+    <li><a href="#">Elemento 5</a></li>
+    <li><a href="#">Elemento 6</a></li>
+  </ul>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-
+DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-
+ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
+
+

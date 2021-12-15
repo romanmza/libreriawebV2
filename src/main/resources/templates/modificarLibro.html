@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modificarLibro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark bg-dark">
+
+
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Navbar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Menú Principal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/libro/lista}">Menú Libros</a>
+            </li>
+
+        </ul>
+
+    </nav>
+     <br><br>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+        <th scope="col">isbn</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Año</th>
+        <th scope="col">Ejemplares</th>
+                <th scope="col">Ejemplares Prestados</th>
+               
+        
+
+            </tr>
+        </thead>
+        <tbody th:each="libro : ${libro}">
+            <tr>
+                
+                <th scope="row" th:text="${libro.id}"></th>
+        <td th:text="${libro.isbn}"></td>
+        <td th:text="${libro.titulo}"></td>
+                <td th:text="${libro.anio}"></td>
+        <td th:text="${libro.ejemplares}"></td>
+                <td th:text="${libro.ejemplaresPrestados}"></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <form th:action="@{/libro/modificar/__${libro.id}__}" method="POST">
+        <input hidden th:value= "${id}" name="id">
+        <div class="form-group">
+    <label>ISBN</label> <input type="number" class="form-control" name="isbn" placeholder="isbn">
+        </div>
+        <div class="form-group">
+        <label>Titulo</label> <input type="text" class="form-control" name="titulo" placeholder="Titulo del Libro">
+    </div>
+        <div class="form-group">
+        <label>Año</label> <input type="number" class="form-control" name="anio" placeholder="Año de publicación">
+    </div>
+        <div class="form-group">
+        <label>Ejemplares</label> <input type="number" class="form-control" name="ejemplares" placeholder="Cantidad de Ejemplares">
+    </div>
+        <div class="form-group">
+        <label>Ejemplares Prestados</label> <input type="number" class="form-control" name="ejemplaresPrestados" placeholder="Cantidad de Ejemplares Prestados">
+        </div>
+
+    </form>
+   <footer>
+        <div class="copyright" style="background-color: #0d47a1;">
+            <div class="container-fluid" style="background-color: #0d47a1; color: #bbdefb;">
+                ©  Copyright: Todos los derechos y los izquierdos reservados.
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
